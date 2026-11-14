@@ -10,7 +10,7 @@ Vite loads `.env` values beginning with `VITE_` and embeds them into the generat
 ## Publish online
 For Netlify, Vercel, GitHub Pages, or another static host, run `npm run build` and set `dist/` as the publish directory. Add the values from `.env.example` to the host's build environment.
 
-Firebase Hosting is configured to publish `dist/`. The GitHub Actions workflows install dependencies, build, and deploy on pushes to `main` and pull requests. Add the values from `.env.example` as GitHub repository **Variables** with the same names; the Firebase service-account secret must also be configured.
+Firebase Hosting is configured to publish `dist/`. The GitHub Actions workflows install dependencies, copy `.env.example` to `.env`, then build and deploy on pushes to `main` and pull requests. No GitHub link Variables are required; the Firebase service-account secret must be configured.
 
 ## Before publishing
 - Confirm the contact and profile URLs in `.env.example` before copying them into `.env` or GitHub repository Variables.
