@@ -16,6 +16,8 @@ The script requires Python 3. You can also open `index.html` directly in a brows
 
 You can also deploy the folder to Netlify or Vercel as a static site.
 
+Firebase Hosting is configured to publish the portfolio files from the repository root. The existing GitHub Actions workflow deploys to Firebase when changes are pushed to `main`; the repository needs the Firebase service-account secret configured for that workflow.
+
 ## Before publishing
 - Confirm the LinkedIn and GitHub profile URLs in `index.html`.
 - Consider adding a downloadable PDF resume link if you want visitors to download it.
