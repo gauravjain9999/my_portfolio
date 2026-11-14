@@ -3,7 +3,9 @@
 A responsive, static portfolio website created from the supplied resume.
 
 ## Run locally
-Open `index.html` in a browser. No build step is required.
+Run `./run.sh` from a terminal, then open <http://127.0.0.1:8000>. Press `Ctrl+C` to stop the server. Set `PORT` to use a different port, for example `PORT=8080 ./run.sh`.
+
+The script requires Python 3. You can also open `index.html` directly in a browser; no build step is required.
 
 ## Publish online
 1. Create a new GitHub repository (for example, `gaurav-jain-portfolio`).
