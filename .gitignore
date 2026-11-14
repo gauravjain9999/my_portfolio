@@ -46,6 +46,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+dist/
 
 # Optional npm cache directory
 .npm
@@ -64,6 +65,8 @@ node_modules/
 
 # dotenv environment variables file
 .env
+.env.*
+!.env.example
 
 # dataconnect generated files
 .dataconnect

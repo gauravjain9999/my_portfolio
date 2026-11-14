@@ -3,22 +3,16 @@
 A responsive, static portfolio website created from the supplied resume.
 
 ## Run locally
-Run `./run.sh` from a terminal, then open <http://127.0.0.1:8000>. Press `Ctrl+C` to stop the server. Set `PORT` to use a different port, for example `PORT=8080 ./run.sh`.
+Run `npm install`, copy `.env.example` to `.env`, and update the link values. Then run `./run.sh` and open <http://127.0.0.1:8000>. Press `Ctrl+C` to stop the server. Set `PORT` to use a different port, for example `PORT=8080 ./run.sh`.
 
-The script requires Python 3. You can also open `index.html` directly in a browser; no build step is required.
+Vite loads `.env` values beginning with `VITE_` and embeds them into the generated HTML. These values are public, so do not put secrets in them.
 
 ## Publish online
-1. Create a new GitHub repository (for example, `gaurav-jain-portfolio`).
-2. Upload `index.html`, `styles.css`, and `script.js`.
-3. In the repository, open **Settings → Pages**.
-4. Choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-5. GitHub Pages will provide your public website URL.
+For Netlify, Vercel, GitHub Pages, or another static host, run `npm run build` and set `dist/` as the publish directory. Add the values from `.env.example` to the host's build environment.
 
-You can also deploy the folder to Netlify or Vercel as a static site.
-
-Firebase Hosting is configured to publish the portfolio files from the repository root. The existing GitHub Actions workflow deploys to Firebase when changes are pushed to `main`; the repository needs the Firebase service-account secret configured for that workflow.
+Firebase Hosting is configured to publish `dist/`. The GitHub Actions workflows install dependencies, build, and deploy on pushes to `main` and pull requests. Add the values from `.env.example` as GitHub repository **Variables** with the same names; the Firebase service-account secret must also be configured.
 
 ## Before publishing
-- Confirm the LinkedIn and GitHub profile URLs in `index.html`.
+- Confirm the contact and profile URLs in `.env.example` before copying them into `.env` or GitHub repository Variables.
 - Consider adding a downloadable PDF resume link if you want visitors to download it.
 - Review all project descriptions for client confidentiality.
