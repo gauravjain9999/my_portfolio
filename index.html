@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
       content="Gaurav Jain — Senior Software Engineer and MEAN Stack Developer specializing in Angular, React, Node.js, Java and AWS." />
-    <meta name="theme-color" content="#0b1020" />
+    <meta name="theme-color" content="#f5f7f4" />
     <title>Gaurav Jain | Senior Software Engineer</title>
     <link rel="preconnect" href="%VITE_FONT_PRECONNECT_URL%">
     <link rel="preconnect" href="%VITE_FONT_ASSETS_PRECONNECT_URL%" crossorigin>
@@ -15,27 +15,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="ambient ambient-one"></div><div
-      class="ambient ambient-two"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#home"><span
           class="brand-mark">GJ</span><span>Gaurav Jain</span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation"
-        aria-expanded="false">☰</button>
-      <nav class="nav">
+      <nav class="nav" id="primary-nav" aria-label="Primary navigation">
         <a href="#about">About</a><a href="#experience">Experience</a><a
           href="#projects">Projects</a><a href="#skills">Skills</a><a
           href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
       </nav>
+      <div class="header-controls">
+        <button class="theme-toggle" type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Dark mode</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"
+          aria-controls="primary-nav" aria-expanded="false">☰</button>
+      </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero section" id="home">
         <div class="hero-copy">
           <div class="eyebrow"><span class="status-dot"></span> OPEN TO EXCITING
             OPPORTUNITIES</div>
           <p class="intro">Hello, I'm</p>
-          <h1>Gaurav <span>Jain.</span></h1>
+          <h1>Gaurav <span>Jain</span></h1>
           <h2>Senior Software Engineer <span class="muted">·</span> MEAN Stack
             Developer</h2>
           <p class="hero-text">I build secure, scalable and user-focused digital
@@ -81,7 +90,7 @@
 
       <section class="section about-section" id="about">
         <div class="section-heading"><span class="section-kicker">01 /
-            ABOUT</span><h2>Engineering with <span>purpose.</span></h2></div>
+            ABOUT</span><h2>Professional <span>Profile</span></h2></div>
         <div class="about-grid">
           <p class="about-lead">I'm a software engineer with 5+ years of
             experience creating enterprise-grade applications across identity,
@@ -95,19 +104,26 @@
               global plant-variety protection platform and a cryptocurrency
               trading product — collaborating closely with backend, DevOps and
               product teams.</p>
-            <div class="text-links"><a
-                href="%VITE_LINKEDIN_ABOUT_URL%" target="_blank"
-                rel="noreferrer">LinkedIn ↗</a><a
-                href="%VITE_GITHUB_ABOUT_URL%" target="_blank"
-                rel="noreferrer">GitHub ↗</a></div>
+            <div class="text-links">
+              <a class="social-button" href="%VITE_LINKEDIN_ABOUT_URL%"
+                target="_blank" rel="noreferrer">
+                <span class="social-mark" aria-hidden="true">in</span>
+                LinkedIn <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="social-button" href="%VITE_GITHUB_ABOUT_URL%"
+                target="_blank" rel="noreferrer">
+                <span class="social-mark" aria-hidden="true">GH</span>
+                GitHub <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="experience">
         <div class="section-heading"><span class="section-kicker">02 /
-            EXPERIENCE</span><h2>Where I've <span>made an
-              impact.</span></h2></div>
+            EXPERIENCE</span><h2>Experience &amp;
+            <span>Impact</span></h2></div>
         <div class="timeline">
           <article class="timeline-item">
             <div class="timeline-marker"></div><div
@@ -165,14 +181,20 @@
       </section>
 
       <section class="section projects-section" id="projects">
-        <div class="section-heading"><span class="section-kicker">03 / SELECTED
-            PROJECTS</span><h2>Things I've <span>built.</span></h2></div>
+        <div class="section-heading"><span class="section-kicker">03 /
+            PROJECTS</span><h2>Featured <span>Projects</span></h2></div>
         <div class="project-grid">
           <article class="project-card project-featured">
             <div class="project-number">01</div><div
               class="project-icon">✎</div>
-            <p class="project-type">ANGULAR PWA · PRODUCTIVITY</p><h3>Keep
-              Notes</h3>
+            <p class="project-type">ANGULAR PWA · PRODUCTIVITY</p>
+            <div class="project-title-row">
+              <h3>Keep Notes</h3>
+              <a class="button button-ghost project-link"
+                href="%VITE_KEEP_NOTES_URL%" target="_blank" rel="noreferrer">
+                Live demo <span aria-hidden="true">↗</span>
+              </a>
+            </div>
             <p>A cloud-native task and note management application focused on
               fast capture, instant search and a smooth daily workflow.</p>
             <ul><li>Redesigned UX and keyboard shortcuts to reduce note creation
@@ -200,14 +222,12 @@
                 API</span><span>Performance</span></div>
           </article>
         </div>
-        <p class="project-note">Professional project descriptions are summarized
-          from my resume. Some client systems are confidential and cannot be
-          linked publicly.</p>
       </section>
 
       <section class="section skills-section" id="skills">
         <div class="section-heading"><span class="section-kicker">04 /
-            TOOLKIT</span><h2>My technical <span>toolkit.</span></h2></div>
+            SKILLS</span><h2>Technical
+            <span>skills</span></h2></div>
         <div class="skills-grid">
           <div class="skill-group"><div
               class="skill-icon">⌘</div><h3>Frontend</h3><p>Angular 11+, Angular
@@ -237,8 +257,8 @@
 
       <section class="section recognition-section">
         <div class="section-heading"><span class="section-kicker">05 /
-            RECOGNITION</span><h2>Work that was
-            <span>recognized.</span></h2></div>
+            RECOGNITION</span><h2>Awards &amp;
+            <span>Recognition</span></h2></div>
         <div class="awards-grid">
           <div class="award-card"><div
               class="award-symbol">✦</div><div><h3>Customer's Delight
@@ -246,7 +266,7 @@
                 release of UPOV PVP across distributed cloud
                 infrastructure.</p></div></div>
           <div class="award-card"><div
-              class="award-symbol">✧</div><div><h3>Falcon
+              class="award-symbol">✦</div><div><h3>Falcon
                 Award</h3><p>Recognized for overcoming early challenges while
                 delivering cloud-native solutions at scale.</p></div></div>
         </div>
@@ -258,22 +278,44 @@
       </section>
 
       <section class="contact-section section" id="contact">
-        <span class="section-kicker">06 / CONTACT</span><h2>Have a good
-          challenge?<br><span>Let's build something.</span></h2>
+        <span class="section-kicker">06 / CONTACT</span><h2>Have a project
+          in mind?<br><span>Let's build something meaningful</span></h2>
         <p>I'm always interested in connecting with people working on thoughtful
           products and meaningful engineering problems.</p>
         <a class="button button-primary"
-          href="%VITE_EMAIL_LINK%">%VITE_EMAIL_ADDRESS% ↗</a>
-        <div class="contact-meta"><a href="%VITE_PHONE_LINK%">%VITE_PHONE_DISPLAY%</a><span>·</span><a
+          href="%VITE_EMAIL_LINK%">
+          <svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.5 7v11M20.5 7v11M3.5 7l8.5 6.3L20.5 7"
+              fill="none" stroke="#EA4335" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2.4" />
+          </svg>
+          %VITE_EMAIL_ADDRESS% <span aria-hidden="true">↗</span>
+        </a>
+        <div class="contact-meta">
+          <a class="contact-phone social-button social-button-inverse"
+            href="%VITE_PHONE_LINK%" aria-label="Call 9773754778">
+            <span class="contact-label">Contact</span>
+            <span class="contact-number" aria-hidden="true">9773754778</span>
+          </a>
+          <a class="social-button social-button-inverse"
             href="%VITE_LINKEDIN_CONTACT_URL%" target="_blank"
-            rel="noreferrer">LinkedIn</a><span>·</span><a
+            rel="noreferrer">
+            <span class="social-mark" aria-hidden="true">in</span>
+            LinkedIn <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="social-button social-button-inverse"
             href="%VITE_GITHUB_CONTACT_URL%" target="_blank"
-            rel="noreferrer">GitHub</a></div>
+            rel="noreferrer">
+            <span class="social-mark" aria-hidden="true">GH</span>
+            GitHub <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
     </main>
     <footer><a class="brand" href="#home"><span
-          class="brand-mark">GJ</span><span>Gaurav Jain</span></a><span>Designed
-        & built with care · <span id="year"></span></span><a href="#home">Back
+          class="brand-mark">GJ</span><span>Gaurav Jain</span></a>
+      <span>Designed
+        & built with care by me.</span><a href="#home">Back
         to top ↑</a></footer>
     <script type="module" src="script.js"></script>
   </body>

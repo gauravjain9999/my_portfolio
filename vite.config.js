@@ -12,6 +12,7 @@ const required = [
   "VITE_GITHUB_ABOUT_URL",
   "VITE_LINKEDIN_CONTACT_URL",
   "VITE_GITHUB_CONTACT_URL",
+  "VITE_KEEP_NOTES_URL",
 ];
 
 export default defineConfig(({ mode }) => {
